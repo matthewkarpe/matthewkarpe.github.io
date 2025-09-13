@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matthew Karpe — Administrative & Customer Service Professional</title>
-  <meta name="description" content="Resume website for Matthew Karpe — administrative & customer service professional. Epic‑ready, HIPAA‑aware." />
+  <meta name="description" content="Resume website for Matthew Karpe — administrative & customer service professional. Epic-ready, HIPAA-aware." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,8 +24,7 @@
     a:hover { text-decoration: underline; }
     .container { max-width: 960px; margin: 0 auto; padding: 24px; }
     header {
-      position: sticky; /* keeps header visible without overlapping content */
-      top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(8px);
+      position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(8px);
       background: rgba(11,15,20,.6);
       border-bottom: 1px solid rgba(255,255,255,.06);
     }
@@ -34,7 +33,6 @@
     .nav a { padding: 10px 12px; border-radius: 10px; }
     .nav a:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
     .chip { font-size: 12px; color: var(--bg); background: linear-gradient(90deg,var(--accent),var(--accent-2)); padding: 4px 10px; border-radius: 999px; font-weight: 600; }
-
     .hero { display: grid; grid-template-columns: 1.3fr .9fr; gap: 24px; align-items: center; padding-top: 24px; }
     .card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
     h1 { font-size: clamp(28px, 4vw, 40px); margin: 8px 0 8px; }
@@ -43,32 +41,20 @@
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.1); background: #16202c; color: var(--text); font-weight: 600; }
     .btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #0b0f14; border: none; }
     .btn:hover { filter: brightness(1.05); text-decoration: none; }
-
     .avatarWrap { aspect-ratio: 1 / 1; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); }
     .avatarWrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-
     section { margin-top: 32px; }
     h2 { font-size: 22px; margin: 0 0 14px; }
     .grid { display: grid; gap: 16px; }
-
-    /* Resume sections */
     .item { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 16px; border-radius: 16px; background: var(--card); border: 1px solid rgba(255,255,255,.08); }
     .item h3 { margin: 0; font-size: 16px; }
     .item .meta { color: var(--muted); font-size: 13px; }
     .item ul { margin: 8px 0 0 18px; padding: 0; line-height: 1.5; }
-
     .skills { display: flex; flex-wrap: wrap; gap: 10px; }
     .skill { padding: 8px 10px; border-radius: 999px; background: #16202c; border: 1px solid rgba(255,255,255,.08); font-weight: 600; font-size: 13px; }
-
     footer { color: var(--muted); text-align: center; padding: 32px 0 12px; font-size: 13px; }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-    }
-    @media (prefers-reduced-motion: no-preference) {
-      :focus-visible { scroll-behavior: smooth; }
-    }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: no-preference) { :focus-visible { scroll-behavior: smooth; } }
   </style>
 </head>
 <body>
@@ -84,27 +70,22 @@
       </nav>
     </div>
   </header>
-
   <main class="container">
-    <!-- HERO -->
     <section class="hero" id="summary">
       <div class="card">
-        <span class="chip" aria-hidden="true">Epic‑ready • HIPAA‑aware</span>
+        <span class="chip" aria-hidden="true">Epic-ready • HIPAA-aware</span>
         <h1>Administrative & Customer Service Professional</h1>
-        <p class="subtitle">Reliable and detail‑oriented with experience in healthcare support, scheduling, and customer service. Strong written communication and calm phone presence. Ready to learn internal systems quickly and follow compliant processes.</p>
+        <p class="subtitle">Reliable and detail-oriented with experience in healthcare support, scheduling, and customer service. Strong written communication and calm phone presence. Ready to learn internal systems quickly and follow compliant processes.</p>
         <div class="btnrow">
-          <!-- Replace resume.pdf after uploading to the repo root -->
           <a class="btn primary" href="resume.pdf" download>Download PDF Resume</a>
           <a class="btn" href="#contact">Contact</a>
         </div>
       </div>
       <div class="avatarWrap card" aria-label="Professional headshot">
-        <!-- Replace img src with your actual photo path or remove this block entirely -->
-        <img src="headshot.png" alt="Headshot of Matthew Karpe" />
+        <img src="headshot.jpg" alt="Headshot of Matthew Karpe" />
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Experience</h2>
       <div class="grid">
@@ -113,45 +94,42 @@
             <h3>Shift Lead — Ally Waste Services</h3>
             <div class="meta">Nov 2023 – Present • Raleigh, NC</div>
             <ul>
-              <li>Coordinated nightly residential pickup routes; ensured completion and logged end‑of‑shift summaries.</li>
+              <li>Coordinated nightly residential pickup routes; ensured completion and logged end-of-shift summaries.</li>
               <li>Trained new teammates on safety, coverage coordination, and customer communication.</li>
               <li>Proactively solved access issues and maintained building relations.</li>
             </ul>
           </div>
           <div class="meta">Operations</div>
         </article>
-
         <article class="item">
           <div>
             <h3>Staff Counselor — Mental Health Association (Group Home)</h3>
             <div class="meta">Feb 2016 – Oct 2016 • Hempstead, NY</div>
             <ul>
-              <li>Monitored clients, documented daily activities, and relayed updates to supervisors (HIPAA‑aware).</li>
+              <li>Monitored clients, documented daily activities, and relayed updates to supervisors (HIPAA-aware).</li>
               <li>Assisted with medication reminders/handling per policy; ensured client safety and routine adherence.</li>
               <li>Answered phones and supported visitors with a friendly, professional demeanor.</li>
             </ul>
           </div>
           <div class="meta">Care Support</div>
         </article>
-
         <article class="item">
           <div>
             <h3>Courier / Driver — Various Platforms</h3>
             <div class="meta">Oct 2017 – Nov 2023 • NY & NC</div>
             <ul>
-              <li>Managed time‑sensitive deliveries, verified identity/address, and handled cash payments when required.</li>
+              <li>Managed time-sensitive deliveries, verified identity/address, and handled cash payments when required.</li>
               <li>Adapted routes to weather/traffic; maintained high customer satisfaction scores.</li>
             </ul>
           </div>
           <div class="meta">Logistics</div>
         </article>
-
         <article class="item">
           <div>
             <h3>Cashier — Waldbaum’s Supermarket</h3>
             <div class="meta">2008 • Jericho, NY</div>
             <ul>
-              <li>Processed transactions accurately; provided courteous in‑lane customer support.</li>
+              <li>Processed transactions accurately; provided courteous in-lane customer support.</li>
             </ul>
           </div>
           <div class="meta">Retail</div>
@@ -159,7 +137,6 @@
       </div>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education">
       <h2>Education</h2>
       <div class="grid">
@@ -173,25 +150,33 @@
           </div>
           <div class="meta">IT Coursework</div>
         </article>
+        <article class="item">
+          <div>
+            <h3>EAC Network — Nassau County</h3>
+            <div class="meta">2009</div>
+            <ul>
+              <li>Earned GED (General Educational Development) credential.</li>
+            </ul>
+          </div>
+          <div class="meta">High School Equivalency</div>
+        </article>
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
         <span class="skill">PC troubleshooting</span>
         <span class="skill">Software installation</span>
         <span class="skill">Scheduling / coverage</span>
-        <span class="skill">Multi‑line phones</span>
-        <span class="skill">HIPAA‑aware</span>
-        <span class="skill">Epic‑ready</span>
+        <span class="skill">Multi-line phones</span>
+        <span class="skill">HIPAA-aware</span>
+        <span class="skill">Epic-ready</span>
         <span class="skill">Customer service</span>
         <span class="skill">Written communication</span>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
       <div class="grid">
@@ -205,7 +190,7 @@
         <article class="item">
           <div>
             <h3>Phone</h3>
-            <div class="meta"><a href="tel:+17713331131">771‑333‑1131</a></div>
+            <div class="meta"><a href="tel:+17713331131">771-333-1131</a></div>
           </div>
           <div class="meta">Voice / SMS</div>
         </article>
@@ -218,7 +203,6 @@
   </main>
 
   <script>
-    // year stamp
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
