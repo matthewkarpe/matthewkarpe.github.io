@@ -183,9 +183,17 @@
         <article class="item">
           <div>
             <h3>Email</h3>
-            <div class="meta"><a href="mailto:mkarpe91@gmail.com">mkarpe91@gmail.com</a></div>
+            <!-- Base64 of "mkarpe91" and "gmail.com". Comments are OUTSIDE the tag so HTML stays valid. -->
+            <div class="meta">
+              <a id="email-link"
+                 href="#"
+                 rel="nofollow"
+                 data-u="bWthcnBlOTE="
+                 data-d="Z21haWwuY29t"
+              >Email me</a>
+            </div>
           </div>
-          <div class="meta">Preferred</div>
+            <div class="meta">Preferred</div>
         </article>
         <article class="item">
           <div>
@@ -204,7 +212,33 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
 
+    // Email obfuscation (keeps address out of static HTML)
+    (function () {
+      const el = document.getElementById('email-link');
+      if (!el) return;
+      const u = atob(el.dataset.u); // "mkarpe91"
+      const d = atob(el.dataset.d); // "gmail.com"
+      const addr = u + '\u0040' + d;
+
+      // Click-to-mail; avoids placing mailto: in static HTML
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = 'mailto:' + addr;
+      });
+
+      // If you prefer the address to be visible after load, uncomment:
+      // el.textContent = addr;
+
+      // If you want right-click > copy email to work, you can also set href at runtime:
+      // el.setAttribute('href', 'mailto:' + addr);
+    })();
+  </script>
+
+  <noscript>
+    <!-- No-JS fallback: hide raw address; invite to use phone instead -->
+    <style>.nojs-note{color:#8ea0b6;font-size:13px}</style>
+    <div class="container nojs-note">Enable JavaScript to reveal the email link, or call 771-333-1131.</div>
+  </noscript>
+</body>
 </html>
