@@ -3,220 +3,223 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Matthew Karpe — Personal Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Matthew Karpe — Administrative & Customer Service Professional</title>
+  <meta name="description" content="Resume website for Matthew Karpe — administrative & customer service professional. Epic‑ready, HIPAA‑aware." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
-      color: #222;
+    :root {
+      --bg: #0b0f14;
+      --card: #11161e;
+      --muted: #8ea0b6;
+      --text: #e7eef7;
+      --accent: #4aa3ff;
+      --accent-2: #81e6d9;
+      --ring: rgba(74,163,255,.4);
     }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 960px; margin: 0 auto; padding: 24px; }
     header {
-      background: linear-gradient(135deg, #2d3e50, #4a6572);
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
+      position: sticky; /* keeps header visible without overlapping content */
+      top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(8px);
+      background: rgba(11,15,20,.6);
+      border-bottom: 1px solid rgba(255,255,255,.06);
     }
-    header h1 { margin: 0; font-size: 2.6rem; font-weight: 800; }
-    header p { margin: 8px 0 16px; font-size: 1.2rem; color: #dbe3ec; }
-    header img.profile {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #fff;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-weight: 700; letter-spacing: .2px; }
+    .nav a { padding: 10px 12px; border-radius: 10px; }
+    .nav a:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+    .chip { font-size: 12px; color: var(--bg); background: linear-gradient(90deg,var(--accent),var(--accent-2)); padding: 4px 10px; border-radius: 999px; font-weight: 600; }
 
-    nav {
-      background: #1c2833;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 20px;
-      font-weight: 600;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-    nav a:hover { background: #34495e; color: #9cf; }
+    .hero { display: grid; grid-template-columns: 1.3fr .9fr; gap: 24px; align-items: center; padding-top: 24px; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    h1 { font-size: clamp(28px, 4vw, 40px); margin: 8px 0 8px; }
+    .subtitle { color: var(--muted); margin: 0 0 16px; line-height: 1.5; }
+    .btnrow { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.1); background: #16202c; color: var(--text); font-weight: 600; }
+    .btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #0b0f14; border: none; }
+    .btn:hover { filter: brightness(1.05); text-decoration: none; }
 
-    main { max-width: 960px; margin: auto; padding: 40px 20px; }
-    section { margin-bottom: 60px; }
-    h2 { border-bottom: 3px solid #4a6572; padding-bottom: 6px; margin-bottom: 20px; color: #2d3e50; }
+    .avatarWrap { aspect-ratio: 1 / 1; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); }
+    .avatarWrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 
-    .card {
-      background: #fff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 24px;
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
+    section { margin-top: 32px; }
+    h2 { font-size: 22px; margin: 0 0 14px; }
+    .grid { display: grid; gap: 16px; }
 
-    ul { margin: 10px 0 0 20px; }
-    .skills span { display: inline-block; background: #eaf0f6; margin: 6px; padding: 10px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
+    /* Resume sections */
+    .item { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 16px; border-radius: 16px; background: var(--card); border: 1px solid rgba(255,255,255,.08); }
+    .item h3 { margin: 0; font-size: 16px; }
+    .item .meta { color: var(--muted); font-size: 13px; }
+    .item ul { margin: 8px 0 0 18px; padding: 0; line-height: 1.5; }
 
-    .cat-photos {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 16px;
-      justify-content: center;
-    }
-    .cat-photos figure {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-    .cat-photos img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .cat-photos figcaption {
-      margin-top: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #2d3e50;
-    }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill { padding: 8px 10px; border-radius: 999px; background: #16202c; border: 1px solid rgba(255,255,255,.08); font-weight: 600; font-size: 13px; }
 
-    footer {
-      background: #2d3e50;
-      color: #ccc;
-      text-align: center;
-      padding: 24px;
-      font-size: 0.9rem;
-      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+    footer { color: var(--muted); text-align: center; padding: 32px 0 12px; font-size: 13px; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
     }
-    footer a { color: #9cf; text-decoration: none; }
+    @media (prefers-reduced-motion: no-preference) {
+      :focus-visible { scroll-behavior: smooth; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Matthew Karpe</h1>
-    <p>Helping people feel supported while keeping operations running smoothly</p>
-    <img src="headshot.png" alt="Matthew Karpe" class="profile">
+    <div class="container nav">
+      <div class="brand">Matthew Karpe</div>
+      <nav aria-label="Primary">
+        <a href="#summary">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#values">Values</a>
-    <a href="#hobbies">Beyond Work</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="summary">
       <div class="card">
-        <p>I am an administrative and support professional who thrives on helping people, solving problems, and keeping operations organized. I believe good work means treating people with fairness, patience, and honesty while making sure the job gets done right.</p>
-        <p>I have worked in healthcare support, customer service, and operations. From counseling clients in a group home to leading nightly shifts and coordinating schedules, I have built experience that combines empathy with reliability. My coworkers describe me as approachable, funny, and dependable, someone who gets the job done without needing supervision.</p>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="card">
-        <h3>Staff Counselor, Mental Health Association of Nassau County</h3>
-        <p><em>February 2016 to October 2016</em></p>
-        <ul>
-          <li>Supported clients in a behavioral health group home with daily routines and emotional needs</li>
-          <li>Ensured safety and documented activities with accuracy and confidentiality</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Shift Lead, Ally Waste Services</h3>
-        <p><em>November 2023 to Present</em></p>
-        <ul>
-          <li>Coordinated nightly residential waste collection and managed scheduling for a two person team</li>
-          <li>Handled route planning and time management to complete tasks on deadline</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card skills">
-        <span>Patient scheduling</span>
-        <span>Customer service</span>
-        <span>Documentation</span>
-        <span>HIPAA awareness</span>
-        <span>Microsoft Word</span>
-        <span>Excel</span>
-        <span>PowerPoint</span>
-        <span>Google Workspace</span>
-        <span>Tech troubleshooting</span>
-        <span>Basic website design</span>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="card">
-        <h3>KarpeAssist (in development)</h3>
-        <p>A flexible admin and tech support service for Raleigh area professionals focused on scheduling, email management, and troubleshooting.</p>
-      </div>
-      <div class="card">
-        <h3>Voiceover Projects</h3>
-        <p>Producing sample reels and building skills in narration and creative audio. Active on VO platforms while refining demos.</p>
-      </div>
-    </section>
-
-    <section id="values">
-      <h2>Values and Philosophy</h2>
-      <div class="card">
-        <p>Good work means helping people, solving problems, and getting the job done right. Fairness, patience, honesty, and efficiency guide how I work, and my goal is always to leave people feeling supported.</p>
-      </div>
-    </section>
-
-    <section id="hobbies">
-      <h2>Beyond Work</h2>
-      <div class="card">
-        <p>I enjoy caring for my two cats, exploring Raleigh by e-bike and scooter, listening to music from classic rock to Motown and old school rap, and joining science and philosophy discussions online. I also enjoy history, superhero shows, and connecting with communities on Discord.</p>
-        <div class="cat-photos">
-          <figure>
-            <img src="rhiannon.jpg" alt="Rhiannon the cat">
-            <figcaption>Rhiannon</figcaption>
-          </figure>
-          <figure>
-            <img src="alexandria.jpg" alt="Alexandria the cat">
-            <figcaption>Alexandria</figcaption>
-          </figure>
+        <span class="chip" aria-hidden="true">Epic‑ready • HIPAA‑aware</span>
+        <h1>Administrative & Customer Service Professional</h1>
+        <p class="subtitle">Reliable and detail‑oriented with experience in healthcare support, scheduling, and customer service. Strong written communication and calm phone presence. Ready to learn internal systems quickly and follow compliant processes.</p>
+        <div class="btnrow">
+          <!-- Replace resume.pdf after uploading to the repo root -->
+          <a class="btn primary" href="resume.pdf" download>Download PDF Resume</a>
+          <a class="btn" href="#contact">Contact</a>
         </div>
       </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email is the best way to reach me.</p>
-        <p><a href="mailto:mkarpe91@gmail.com">mkarpe91@gmail.com</a></p>
+      <div class="avatarWrap card" aria-label="Professional headshot">
+        <!-- Replace img src with your actual photo path or remove this block entirely -->
+        <img src="headshot.jpg" alt="Headshot of Matthew Karpe" />
       </div>
     </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <article class="item">
+          <div>
+            <h3>Shift Lead — Ally Waste Services</h3>
+            <div class="meta">Nov 2023 – Present • Raleigh, NC</div>
+            <ul>
+              <li>Coordinated nightly residential pickup routes; ensured completion and logged end‑of‑shift summaries.</li>
+              <li>Trained new teammates on safety, coverage coordination, and customer communication.</li>
+              <li>Proactively solved access issues and maintained building relations.</li>
+            </ul>
+          </div>
+          <div class="meta">Operations</div>
+        </article>
+
+        <article class="item">
+          <div>
+            <h3>Staff Counselor — Mental Health Association (Group Home)</h3>
+            <div class="meta">Feb 2016 – Oct 2016 • Hempstead, NY</div>
+            <ul>
+              <li>Monitored clients, documented daily activities, and relayed updates to supervisors (HIPAA‑aware).</li>
+              <li>Assisted with medication reminders/handling per policy; ensured client safety and routine adherence.</li>
+              <li>Answered phones and supported visitors with a friendly, professional demeanor.</li>
+            </ul>
+          </div>
+          <div class="meta">Care Support</div>
+        </article>
+
+        <article class="item">
+          <div>
+            <h3>Courier / Driver — Various Platforms</h3>
+            <div class="meta">Oct 2017 – Nov 2023 • NY & NC</div>
+            <ul>
+              <li>Managed time‑sensitive deliveries, verified identity/address, and handled cash payments when required.</li>
+              <li>Adapted routes to weather/traffic; maintained high customer satisfaction scores.</li>
+            </ul>
+          </div>
+          <div class="meta">Logistics</div>
+        </article>
+
+        <article class="item">
+          <div>
+            <h3>Cashier — Waldbaum’s Supermarket</h3>
+            <div class="meta">2008 • Jericho, NY</div>
+            <ul>
+              <li>Processed transactions accurately; provided courteous in‑lane customer support.</li>
+            </ul>
+          </div>
+          <div class="meta">Retail</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <article class="item">
+          <div>
+            <h3>Nassau Community College</h3>
+            <div class="meta">2011 – 2012</div>
+            <ul>
+              <li>Completed 33 credits toward IT (Information Technology).</li>
+            </ul>
+          </div>
+          <div class="meta">IT Coursework</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">PC troubleshooting</span>
+        <span class="skill">Software installation</span>
+        <span class="skill">Scheduling / coverage</span>
+        <span class="skill">Multi‑line phones</span>
+        <span class="skill">HIPAA‑aware</span>
+        <span class="skill">Epic‑ready</span>
+        <span class="skill">Customer service</span>
+        <span class="skill">Written communication</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid">
+        <article class="item">
+          <div>
+            <h3>Email</h3>
+            <div class="meta"><a href="mailto:mkarpe91@gmail.com">mkarpe91@gmail.com</a></div>
+          </div>
+          <div class="meta">Preferred</div>
+        </article>
+        <article class="item">
+          <div>
+            <h3>Phone</h3>
+            <div class="meta"><a href="tel:+17713331131">771‑333‑1131</a></div>
+          </div>
+          <div class="meta">Voice / SMS</div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Matthew Karpe. This site is a simple resume hub for job applications.
+    </footer>
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> Matthew Karpe. All rights reserved.</p>
-  </footer>
-
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
