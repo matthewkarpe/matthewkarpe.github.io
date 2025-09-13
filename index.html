@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matthew Karpe — Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
+      color: #222;
+    }
+    header {
+      background: linear-gradient(135deg, #2d3e50, #4a6572);
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 { margin: 0; font-size: 2.6rem; font-weight: 800; }
+    header p { margin: 8px 0 16px; font-size: 1.2rem; color: #dbe3ec; }
+    header img.profile {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    nav {
+      background: #1c2833;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      font-weight: 600;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover { background: #34495e; color: #9cf; }
+
+    main { max-width: 960px; margin: auto; padding: 40px 20px; }
+    section { margin-bottom: 60px; }
+    h2 { border-bottom: 3px solid #4a6572; padding-bottom: 6px; margin-bottom: 20px; color: #2d3e50; }
+
+    .card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    ul { margin: 10px 0 0 20px; }
+    .skills span { display: inline-block; background: #eaf0f6; margin: 6px; padding: 10px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
+
+    .cat-photos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      justify-content: center;
+    }
+    .cat-photos figure {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .cat-photos img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .cat-photos figcaption {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2d3e50;
+    }
+
+    footer {
+      background: #2d3e50;
+      color: #ccc;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+    }
+    footer a { color: #9cf; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Matthew Karpe</h1>
+    <p>Helping people feel supported while keeping operations running smoothly</p>
+    <img src="headshot.png" alt="Matthew Karpe" class="profile">
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#values">Values</a>
+    <a href="#hobbies">Beyond Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>I am an administrative and support professional who thrives on helping people, solving problems, and keeping operations organized. I believe good work means treating people with fairness, patience, and honesty while making sure the job gets done right.</p>
+        <p>I have worked in healthcare support, customer service, and operations. From counseling clients in a group home to leading nightly shifts and coordinating schedules, I have built experience that combines empathy with reliability. My coworkers describe me as approachable, funny, and dependable, someone who gets the job done without needing supervision.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Staff Counselor, Mental Health Association of Nassau County</h3>
+        <p><em>February 2016 to October 2016</em></p>
+        <ul>
+          <li>Supported clients in a behavioral health group home with daily routines and emotional needs</li>
+          <li>Ensured safety and documented activities with accuracy and confidentiality</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Shift Lead, Ally Waste Services</h3>
+        <p><em>November 2023 to Present</em></p>
+        <ul>
+          <li>Coordinated nightly residential waste collection and managed scheduling for a two person team</li>
+          <li>Handled route planning and time management to complete tasks on deadline</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card skills">
+        <span>Patient scheduling</span>
+        <span>Customer service</span>
+        <span>Documentation</span>
+        <span>HIPAA awareness</span>
+        <span>Microsoft Word</span>
+        <span>Excel</span>
+        <span>PowerPoint</span>
+        <span>Google Workspace</span>
+        <span>Tech troubleshooting</span>
+        <span>Basic website design</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>KarpeAssist (in development)</h3>
+        <p>A flexible admin and tech support service for Raleigh area professionals focused on scheduling, email management, and troubleshooting.</p>
+      </div>
+      <div class="card">
+        <h3>Voiceover Projects</h3>
+        <p>Producing sample reels and building skills in narration and creative audio. Active on VO platforms while refining demos.</p>
+      </div>
+    </section>
+
+    <section id="values">
+      <h2>Values and Philosophy</h2>
+      <div class="card">
+        <p>Good work means helping people, solving problems, and getting the job done right. Fairness, patience, honesty, and efficiency guide how I work, and my goal is always to leave people feeling supported.</p>
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <h2>Beyond Work</h2>
+      <div class="card">
+        <p>I enjoy caring for my two cats, exploring Raleigh by e-bike and scooter, listening to music from classic rock to Motown and old school rap, and joining science and philosophy discussions online. I also enjoy history, superhero shows, and connecting with communities on Discord.</p>
+        <div class="cat-photos">
+          <figure>
+            <img src="rhiannon.jpg" alt="Rhiannon the cat">
+            <figcaption>Rhiannon</figcaption>
+          </figure>
+          <figure>
+            <img src="alexandria.jpg" alt="Alexandria the cat">
+            <figcaption>Alexandria</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email is the best way to reach me.</p>
+        <p><a href="mailto:mkarpe91@gmail.com">mkarpe91@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Matthew Karpe. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
